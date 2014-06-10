@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org.1999/xhtml1-transitional.dtd">
+<head>
+<title>RedEvolution Quote Calculator</title>
+<link href="bootstrap.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="quote.js"></script>
+</head>
+
+<body>
+<div id="quote-container">
+<div id="getAQuote">
+<p>Get a Quick Quote </p>
+</div>
+<img src="re-hi-res-bright-red.jpg" id="logo">
+<div id="mistake-text">
+<p>Changed your mind?</p>
+</div>
+<button id="start-again" class="buttons">Start Again</button>
+<div id="Questions">
+<div class="question-first">
+<div id="questionfirst"> <p> Do you need some strategic help? </p>
+</div>
+<div class="btn-group">
+  <button class="btn btn-large">Select</button>
+  <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+	<li class="answer" id="yes"> <a tabindex="-1" price="0" info="Strategic Help: Yes please, we're kind of confused and your input would be useful" href="javascript:void(0)"><strong>FREE - </strong> Yes please, we're kind of confused and your input would be useful </a> </li>
+	<li class="answer" id="no"> <a tabindex="-1" price="0" info="Strategic Help: That might be helpful but we're kind of on it" href="javascript:void(0)"><strong>FREE - </strong> That might be helpful but we're kind of on it </a> </li>
+	<li class="answer" id="no2"> <a tabindex="-1" price="0" info="Strategic Help: Not really, we're all over it and just need someone to make it happen" href="javascript:void(0)"><strong>FREE - </strong> Not really, we're all over it and just need someone to make it happen </a> </li>
+  </ul>
+</div>
+</div>
+
+<div class="question" id="question1-id">
+<div id="question1"> <p> Would you like us to <br> host your new website? </p>
+</div>
+<div class="btn-group">
+  <button class="btn btn-large">Select</button>
+  <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+	<li class="answer" id="option1"> <a tabindex="-1" price="600" info="Hosting: Yes please and I'd like a fully managed service on your dedicated server" href="javascript:void(0)"><strong> &pound600 - </strong> Yes please and I'd like a fully managed service on your dedicated server </a> </li>
+	<li class="answer" id="option2"> <a tabindex="-1" price="200" info="Hosting: Yes please but shared hosting is fine" href="javascript:void(0)"><strong>&pound200 - </strong> Yes please but shared hosting is fine</a> </li>
+	<li class="answer" id="option4"> <a tabindex="-1" price="0" info="Hosting: No thanks, our current hosting is reliable and pain free" href="javascript:void(0)"><strong>FREE - </strong> No thanks, our current hosting is reliable and pain free</a> </li>
+  </ul>
+</div>
+</div>
+
+<div class="question">
+<div id="question2"> <p> What about design? </p>
+</div>
+<div class="btn-group">
+  <button class="btn btn-large">Select</button>
+  <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+	<li class="answer" id="option5"> <a tabindex="-1" price="500" info="Design: Money's tight so we'd be happy with an off the shelf design" href="javascript:void(0)"><strong> &pound500 - </strong> Money's tight so we'd be happy with an off the shelf design <br> with some tweaking to match our company colours </a> </li>
+	<li class="answer" id="option6"> <a tabindex="-1" price="1155" info="Design: We need a unique design but our budget is tight so we're happy to make some compromises" href="javascript:void(0)"><strong> &pound1155 - </strong> We need a unique design but our budget is tight so we're  <br>happy to make some compromises </a> </li>
+	<li class="answer" id="option7"> <a tabindex="-1" price="4000" info="Design: We want you guys to create something special that works across all platforms (smartphones, tablets etc)" href="javascript:void(0)"><strong> &pound4000 - </strong> We want you guys to create something special that works across <br> all platforms (smartphones, tablets etc)</a> </li>
+  </ul>
+</div>
+</div>
+
+<div class="question" id="question3-id">
+<div id="question3"> <p> Do you need traffic from Google etc? </p>
+</div>
+<div class="btn-group">
+  <button class="btn btn-large">Select</button>
+  <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+	<li class="answer" id="option8"> <a tabindex="-1" price="0" info="Traffic: Our customers know who we are, we don't need traffic from search engines" href="javascript:void(0)"><strong> FREE - </strong> Our customers know who we are, we don't need traffic from search engines </a> </li>
+	<li class="answer" id="option9"> <a tabindex="-1" price="770" info="Traffic: We'd like the site to generate sales but we're very niche so don't expect search marketing to be too difficult" href="javascript:void(0)"><strong> &pound770 - </strong> We'd like the site to generate sales but we're very niche so don't <br>expect search marketing to be too difficult </a> </li>
+	<li class="answer" id="option10"> <a tabindex="-1" price="3000" info="Traffic: We're in a competitive market but need to stand out and be found in the search engines" href="javascript:void(0)"><strong> &pound3000 - </strong> We're in a competitive market but need to stand out and be found in <br>the search engines </a> </li>
+	
+  </ul>
+</div>
+</div>
+
+</div>
+<div id="your-price"> <p> Prices start from: <strong>&pound</strong></p>
+</div>
+<div id="runningTotal">0
+</div>
+</div>
+<div style="clear:both;"></div>
+
+<div id="final-quote">
+<div id="prices">
+<div id="p1"><p> Prices for your project start from:</p></div> 
+<div id="pound"><p> &pound </p></div>
+<div id="finalTotal"></div>
+<div id="p2"><p> We just need a little bit <br>more information from you... </p></div>
+<button id="final-button" class="buttons">Next</button>
+<button id="back-button1" class="buttons">Go Back</button>
+</div>
+</div>
+
+<div style="clear:both;"></div>
+<div id="tellUsMore">
+<div>
+<form action="send-mail.php" method="post" enctype="text/plain">
+Name: <input type="text" name="name" value=""><br>
+E-mail:<input type="text" name="mail" value=""><br>
+Anything else you want to tell us:<textarea id ="comments" name="comment" value="" size="50"> </textarea>
+<input type="hidden" id="input-q1" value="">
+<input type="hidden" id="input-q2" value="">
+<input type="hidden" id="input-q3" value="">
+<input type="hidden" id="input-q4" value="">
+<input type="submit" id="submit" value="Submit">
+</form>
+<button id="back-button2" class="buttons">Go Back</button>
+</div>
+</div>
+
+</body>
+
+</html>
