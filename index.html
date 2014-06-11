@@ -3,6 +3,7 @@
 <head>
 <title>RedEvolution Quote Calculator</title>
 <link href="bootstrap.css" rel="stylesheet">
+<link href="quote.css" rel="stylesheet">    
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="bootstrap-dropdown.js"></script>
 <script type="text/javascript" src="quote.js"></script>
@@ -106,19 +107,31 @@
 <div style="clear:both;"></div>
 <div id="tellUsMore">
 <div>
-<form action="send-mail.php" method="post" enctype="text/plain">
-Name: <input type="text" name="name" value=""><br>
-E-mail:<input type="text" name="mail" value=""><br>
-Anything else you want to tell us:<textarea id ="comments" name="comment" value="" size="50"> </textarea>
+<form action="process.php" method="post">
+<ul style="list-style-type:none;">
+<li>Name: <input type="text" name="name"><br></li>
+<li>E-mail:<input type="text" name="email"><br></li>
+<!--<li>Anything else you want to tell us:<textarea id ="comments" name="comment" value="" size="50"> </textarea></li>
 <input type="hidden" id="input-q1" value="">
 <input type="hidden" id="input-q2" value="">
 <input type="hidden" id="input-q3" value="">
-<input type="hidden" id="input-q4" value="">
-<input type="submit" id="submit" value="Submit">
+<input type="hidden" id="input-q4" value="">-->
+<li><input type="submit" id="submit" value="Submit"></li>
+</ul>    
 </form>
 <button id="back-button2" class="buttons">Go Back</button>
 </div>
 </div>
+    
+<form action="process.php" method="post">
+<ul style="list-style-type: none;">
+<li>Name: <input type="text" name="name" size="30" maxlength="40"></li>
+<li>&nbsp;</li>
+<li>Email: <input type="text" name="email" size="30" maxlength="40"></li>
+<li>&nbsp;</li>
+<li><input type="submit" name="submit" value="Send"></li>
+</ul>
+</form>    
 
 </body>
 
