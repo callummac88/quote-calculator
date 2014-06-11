@@ -35,5 +35,3 @@ mail( "callum@redevolution.com", "Quote Enquiry",
 );
 }
 ?>
-
-<!-- callum -->
